@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewel Of Nizam - The Minar</title>
+    <link rel="stylesheet" href="golkondadine.css">
+    <script type="text/javascript" src="golkondadine.js"></script>
+
+</head>
+
+<body>
+    <div class="templatemo-flex-row">
+        <!-- Main content -->
+        <div class="templatemo-content col-1 light-gray-bg">
+            <div class="templatemo-top-nav-container">
+                <div class="row text-center text-uppercase font-weight-bold">
+                    <h4 class="active">Jewel Of Nizam - The Minar</h4>
+                </div>
+                <br>
+                <div class="row text-center">
+                    <h4>
+                        <a href="alltest.html" class="active">
+                            <i style="padding: 0px;font-size: 40px;" class="fa" aria-hidden="true"></i>Table Reservation
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <div class="templatemo-content-container">
+                <div class="bootstrap-iso">
+                    <div class="container-fluid dine_sections">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-5 dine_content py-0 dine_one">
+                                <h2>Jewel Of Nizam - The Minar</h2>
+                                <p class="font-size-16">This award-winning authentic Hyderabadi cuisine restaurant is
+                                    also called Hyderabad's fifth Minar. Take in the spectacular views of the Osman
+                                    Sagar as you are perched 100 feet above, relishing the aromas and flavours of Nizami
+                                    cuisine, recipes of which are priceless gems from a royal repast.</p>
+                                <p class="font-size-16 mb-0"><span class="font-weight-bold">Dress code:</span> Formal
+                                    and Semi-formal</p>
+                                <p class="font-size-16">Children under 12 not allowed for dinner</p>
+                                <h4 class="mt-3">TIMINGS</h4>
+                                <p class="font-size-16 mb-0"><span class="font-weight-bold">Lunch:</span> 12.30 PM to
+                                    3.30 PM</p>
+                                <p class="font-size-16"><span class="font-weight-bold">Dinner:</span> 07.30 PM to 11.30
+                                    PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="templatemo-guest">
+            <div class="templatemo-guest-content col-1 light-gray-bg">
+                <div class="templatemo-guest-container">
+                    <div class="bootstrap-iso">
+                        <div class="container-fluid dine_sections">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <form method="post" id='resForm'>
+                                        <div class="tab">
+                                            <h3 id="grid-example-mixed-complete"><a class="anchorjs-link "
+                                                    href="#grid-example-mixed-complete"
+                                                    aria-label="Anchor link for: grid example mixed complete"
+                                                    data-anchorjs-icon=""
+                                                    style="font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Reservation
+                                                Details</h3>
+
+                                            <div class="row">
+                                                <div class="form-group col-md-6 col-xs-6">
+                                                    <label class="control-label " for="date">
+                                                        Date
+                                                        <span class="asteriskField">
+                                                            *
+                                                        </span>
+                                                    </label>
+                                                    <input class="form-control" id="dine_date"
+                                                        name="RESERVATION_DATE_DISPLAY" autocomplete=off
+                                                        placeholder="MM-DD-YYYY" type="date" required
+                                                        onchange="populateScheduleDropdown()" />
+                                                    <input type="hidden" name="RESERVATION_DATE" id="date" />
+                                                    <input name="SOURCE" value="WEBSITE##" type="hidden" />
+                                                </div>
+
+                                                <div class="form-group col-md-6 col-xs-6">
+                                                    <label class="control-label requiredField" for="SCHEDULE_ID">
+                                                        Schedule
+                                                        <span class="asteriskField">
+                                                            *
+                                                        </span>
+                                                    </label>
+                                                    <select class="select form-control" id="dine_schedule"
+                                                        name="SCHEDULE_ID" onchange="populateSecondDropdown()" required>
+                                                        <option value="">
+                                                            Select
+                                                        </option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-md-6 col-xs-6">
+                                                        <label class="control-label requiredField" for="time">
+                                                            Time
+                                                            <span class="asteriskField">
+                                                                *
+                                                            </span>
+                                                        </label>
+                                                        <select class="select form-control" id="dine_time"
+                                                            name="RESERVATION_TIME" onchange="populateGuestDropdown()"
+                                                            required>
+                                                            <option value="">
+                                                                Select
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-md-6 col-xs-6">
+                                                        <label class="control-label requiredField" for="pax">
+                                                            Number of Guests
+                                                            <span class="asteriskField">
+                                                                *
+                                                            </span>
+                                                        </label>
+                                                        <select class="form-control" id="dine_guests"
+                                                            name="no_of_guests" onchange="populateTableDropdown()"
+                                                            required>
+                                                            <option value="">Select</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-md-6 col-xs-6">
+                                                        <label class="control-label requiredField" for="pax">
+                                                            Tables
+                                                            <span class="asteriskField">
+                                                                *
+                                                            </span>
+                                                        </label>
+                                                        <select class="form-control" id="dine_table" name="table"
+                                                            onchange="updateImage()" required>
+                                                            <option value="">Select</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-md-12">
+                                                        <label class="control-label " for="special-instructions">
+                                                            Any Special Request?
+                                                        </label>
+                                                        <textarea class="form-control" cols="40"
+                                                            id="special-instructions" rows="2"
+                                                            name="SPECIAL_INSTRUCTIONS"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-md-12">
+                                                        <h5 id="grid-example-mixed-complete"><span
+                                                                class="asteriskField">
+                                                                *
+                                                            </span><a class="anchorjs-link "
+                                                                href="#grid-example-mixed-complete"
+                                                                aria-label="Anchor link for: grid example mixed complete"
+                                                                data-anchorjs-icon=""
+                                                                style="font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>To
+                                                            confirm your reservation, a cover charge of Rs. 2000 per
+                                                            person
+                                                            will be collected.
+                                                            The same will be
+                                                            adjusted in your bill.</h5>
+                                                        <h5 id="grid-example-mixed-complete">
+                                                            <span class="asteriskField">
+                                                                *
+                                                            </span>
+                                                            <a class="anchorjs-link "
+                                                                href="#grid-example-mixed-complete"
+                                                                aria-label="Anchor link for: grid example mixed complete"
+                                                                data-anchorjs-icon=""
+                                                                style="font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                                                            </a>
+                                                            Note:
+                                                            Children under 12 years are not allowed for dinner
+                                                        </h5>
+                                                        <h5 id="grid-example-mixed-complete">
+                                                            <span class="asteriskField">
+                                                                *
+                                                            </span>
+                                                            <a class="anchorjs-link "
+                                                                href="#grid-example-mixed-complete"
+                                                                aria-label="Anchor link for: grid example mixed complete"
+                                                                data-anchorjs-icon=""
+                                                                style="font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                                                            </a>
+                                                            Note:
+                                                            Table selection made by you is provisional. Management
+                                                            reserves
+                                                            right to give alternative table
+                                                        </h5>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-md-3 col-xs-12">
+                                                        <button class="btn btn-secondary btn-block"
+                                                            style="background: #223c8c" type="button" id="prevBtn" value="prev"
+                                                            onclick="navigate(this.id)">Previous</button>
+                                                    </div>
+                                                    <div class="form-group col-md-3 col-xs-12"></div>
+                                                    <div class="form-group col-md-3 col-xs-12">
+                                                        <button class="btn btn-primary btn-block"
+                                                            style="background: #223c8c" type="button" value="submit" id="submitRequest"
+                                                            onclick="navigate(this.id)">Submit Request</button>
+                                                    </div>
+                                                    <div class="form-group col-md-3 col-xs-12">
+                                                        <button class="btn btn-primary btn-block"
+                                                            style="background: #223c8c" type="button" value="pay" id="payBtn"
+                                                            onclick="navigate(this.id)">Proceed to Pay</button>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="templatemo-guest-container table-view">
+                <div class="bootstrap-iso">
+                    <div class="container-fluid dine_sections">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row" id="tableSelectionRow">
+                                    <div class="form-group col-md-12">
+                                        <label class="control-label " for="special-instructions"
+                                            style="padding-left: 150px;">
+                                            Select your Table
+                                        </label>
+                                        <div id="container"> <img src="../gkTableImage/Blank.png" alt="Default Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
